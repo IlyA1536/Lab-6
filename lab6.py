@@ -48,7 +48,7 @@ def gradient_descent(x, y, learning_rate=0.001, n_iter=1000):
     n = len(x)
     errors = []
 
-    for i in range(n_iter):
+    for _ in range(n_iter):
         y_pred = k * x + b
         error = np.mean((y - y_pred) ** 2)
         errors.append(error)
@@ -83,7 +83,7 @@ plt.show()
 
 # 3. Графік похибки
 plt.figure(figsize=(10, 6))
-plt.plot(errors, label='Похибка')
+plt.plot(errors, label='MSE похибка')
 plt.xlabel('Ітерація')
 plt.ylabel('Похибка')
 plt.title('Графік похибки')
